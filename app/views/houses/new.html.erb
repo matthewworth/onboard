@@ -1,2 +1,12 @@
-<h1>Houses#new</h1>
-<p>Find me in app/views/houses/new.html.erb</p>
+<%= simple_form_for @house do |f| %>
+
+ 	<%= :title %>
+ 	<%= :address %>
+ 	<%= :description %>
+ 	<%= :price_in_pence %>
+ 	<%= :number_of_rooms %>
+ 	<%= :max_guests %>
+    
+    <%= f.button :submit, "Add a room" %>
+
+  <% end %>
