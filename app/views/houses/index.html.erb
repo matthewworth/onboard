@@ -10,6 +10,9 @@
 					<%= link_to house.title, house_path(house.id) %>
 				</h2>
 
+				<p> <%= house.address %></p>
+				<p> GBP<%= house.price_in_pence / 100 %></p>
+
 			</div>
 
 		<% end %>	
