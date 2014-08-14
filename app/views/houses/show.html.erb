@@ -1,2 +1,27 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<h2><%= @house.title %></h2>
+	<div class="address">
+
+		<%= @house.address %>
+
+	</div>
+
+	<div class="map">
+
+	</div>
+
+
+	<div class="description">
+
+	</div>
+
+	<div class="user">
+
+	</div>
+
+	<div class="actions">
+		<!-- Add in path to new order -->
+		<%= link_to "Book room", "#" %>
+		<%= link_to "Edit", edit_house_path(@house.id) %>
+		<%= link_to "Delete", house_path(@house.id), method: :delete %>
+	
+	</div>
