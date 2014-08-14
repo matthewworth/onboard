@@ -6,8 +6,8 @@ class CreateHouses < ActiveRecord::Migration
     	t.float :latitude
     	t.float :longitude
     	t.integer :price_in_pence
-    	t.intefer :numner_of_roooms
-		t.integer :max_guests
+    	t.integer :numner_of_roooms
+		  t.integer :max_guests
     	t.boolean :is_featured
     	t.boolean :available
 
