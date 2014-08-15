@@ -24,7 +24,7 @@
 
 	<div class="actions">
 		<!-- Add in path to new order -->
-		<%= link_to "Book room", new_order_path, class: 'button' %>
+		<%= link_to "Book room", new_house_order_path(@house.id), class: 'button' %>
 		<%= link_to "Edit", edit_house_path(@house.id), class: 'button' %>
 		<%= link_to "Delete", house_path(@house.id), method: :delete, class: 'button' %>
 		
