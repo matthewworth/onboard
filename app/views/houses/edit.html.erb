@@ -1,2 +1,13 @@
-<h1>Houses#edit</h1>
-<p>Find me in app/views/houses/edit.html.erb</p>
+<%= simple_form_for [@user, @house], url: house_path, method: :put do |f| %>
+
+ 	<%= f.input :title %>
+ 	<%= f.input :address %>
+ 	<%= f.input :description %>
+ 	<%= f.input :price_in_pence %>
+ 	<%= f.input :number_of_rooms %>
+ 	<%= f.input :max_guests %>
+ 	<%= f.input :image %>
+    
+    <%= f.button :submit, "Add a room" %>
+
+  <% end %>

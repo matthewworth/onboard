@@ -12,7 +12,7 @@
 <div class="container">
   <header class="row">
     <h1 class="two columns">
-      <%= link_to("#") do %>
+      <%= link_to(root_path) do %>
         <%= image_tag "logo.png" %>
       <% end %>
     </h1>
@@ -22,13 +22,17 @@
     </form>
 
     <nav class="seven columns">
-      <%# link_to "Dashboard", "#" %>
-      <%# link_to "Add a room", "#" %>
-      <%# link_to "Orders", "#" %>
-      <%# link_to "Log out", "#" %>
+      <% if current_user? %>
+      <h3><%= current_user.username %></h3>
+      <%= link_to "Dashboard", "#" %>
+      <%= link_to "Add a house", new_house_path %>
+      <%= link_to "Orders", orders_path %>
+      <%= link_to "Log out", session_path, method: :delete %>
+    <% else %>
 
-      <%= link_to "Sign up", "#" %>
-      <%= link_to "Sign in", "#" %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Log in", new_session_path %>
+    <% end %>
     </nav>
   </header>
 

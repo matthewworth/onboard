@@ -5,23 +5,27 @@
 
 	</div>
 
-	<div class="map">
+	<div class="image">
+		<%= image_tag @house.image.url %>
+	</div>
+
+	<div class="map" data-lat='<%= @house.latitude %>' data-lng='<%= @house.longitude %>'>
 
 	</div>
 
 
 	<div class="description">
-
+			<%= simple_format @house.description %>
 	</div>
 
 	<div class="user">
-
+		<p> Added by <%= @house.user.username %></p>
 	</div>
 
 	<div class="actions">
 		<!-- Add in path to new order -->
-		<%= link_to "Book room", "#" %>
-		<%= link_to "Edit", edit_house_path(@house.id) %>
-		<%= link_to "Delete", house_path(@house.id), method: :delete %>
-	
+		<%= link_to "Book room", new_order_path, class: 'button' %>
+		<%= link_to "Edit", edit_house_path(@house.id), class: 'button' %>
+		<%= link_to "Delete", house_path(@house.id), method: :delete, class: 'button' %>
+		
 	</div>

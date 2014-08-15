@@ -1,5 +1,5 @@
 $(document).on "ready page:load", ->
-  
+
   $("div.input.file").append("<a class=\"upload_override\">Choose a file</a>")
 
   $(".upload_override").click (e) ->
@@ -11,7 +11,7 @@ $(document).on "ready page:load", ->
   $("#upload_override").click (e) ->
     e.preventDefault
     $('#job_company_logo').click()
-    
+
   $('select').chosen({disable_search_threshold: 2})
 
 
@@ -23,7 +23,7 @@ class Map
       zoom: 14,
       maxZoom: 17,
       minZoom: 11,
-      layers: new L.TileLayer('https://a.tiles.mapbox.com/v3/riklomas.gc4l65g7/{z}/{x}/{y}.png', { detectRetina: true }),
+      layers: new L.TileLayer('https://a.tiles.mapbox.com/v3/steer.ijbel9hk/{z}/{x}/{y}.png', { detectRetina: true }),
       scrollWheelZoom: false
 
     myIcon = L.icon
