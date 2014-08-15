@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815145744) do
+ActiveRecord::Schema.define(version: 20140815164727) do
 
   create_table "houses", force: true do |t|
     t.string   "title"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140815145744) do
   create_table "orders", force: true do |t|
     t.integer  "user_id"
     t.integer  "house_id"
-    t.string   "striple_token"
+    t.string   "stripe_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
